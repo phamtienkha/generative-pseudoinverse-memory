@@ -32,10 +32,6 @@ class Model(nn.Module):
         input_recon = torch.sigmoid(input_recon)
         return input_recon
 
-    # def write(self, input_encoded):
-    #     posterior_memory, dkl_M = self.memory.write_to_memory(input_encoded)
-    #     return posterior_memory, dkl_M
-
     def write(self, input_encoded):
         posterior_memory, dkl_M = self.memory.write_to_memory(input_encoded)
         return posterior_memory, dkl_M
